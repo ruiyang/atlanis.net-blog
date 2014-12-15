@@ -1,12 +1,12 @@
-#+AUTHOR: J David Smith
-#+DATE: <2014-03-03 Mon 14:26>
+#+AUTHOR: Rui Yang
+#+DATE: <2014-12-15 Mon 23:00>
 
 * What is this?
-  This is the source repository for my blog. The site is built using
-  [[https://github.com/magnars/stasis][stasis]].
-
-  You can see the resulting site [[http://atlanis.net/blog/][here]].
-
-* Can I use this?
-  Yup! This source code is available under [[https://www.gnu.org/licenses/gpl-3.0.html][GPLv3]] ([[https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)][overview]]) and the blog content is
-  available under [[https://creativecommons.org/licenses/by/4.0/][CCv4]]
+  A static site generator. Engine in Clojure stasis, written in Emacs Org mode. Based on work from https://github.com/emallson/atlanis.net-blog.git
+* Usage
+** Serve the blog locally
+   - Lein ring server-headless
+     This will start server at http://localhost:3000. /index.html gives list all the pages.
+** Build
+   - lein run -m atlanis.blog.core/-main :development/:production
+     The build output is in ./build/development or ./build/production
